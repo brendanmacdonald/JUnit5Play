@@ -2,16 +2,18 @@ package com.brendan.junit5;
 
 
 import com.brendan.calculator.Calculator;
+import com.brendan.junit5.Extensions.LoggingExtension;
+import com.brendan.junit5.Extensions.TimingExtension;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class JUnit5Test {
+public class ValueSourceTests {
 
-    private Calculator calculator = new Calculator();
+    private final Calculator calculator = new Calculator();
 
     @BeforeAll
     static void beforeAll() {
@@ -24,7 +26,7 @@ public class JUnit5Test {
     }
 
     @AfterEach
-    void afterEach() {
+    void afterEach(TestInfo testInfo) {
         System.out.println("After each test method");
     }
 
@@ -36,23 +38,14 @@ public class JUnit5Test {
     @ParameterizedTest
     @ValueSource(ints = {2, 3, 5})
     @DisplayName("An example of a ValueSource parameterised test")
-    void outputSumOfNumbersWithValueSource(int x) {
+    @ExtendWith({TimingExtension.class, LoggingExtension.class})
+    void outputSumOfNumbersWithValueSource(int x) throws InterruptedException {
         String s = String.format("The square of %s should be " + (x*x), x);
+
+        // Enforce sleep to test timing extension.
+        Thread.sleep(1500);
 
         int actualSquare = calculator.squareNumber(x);
         assertEquals(x*x, actualSquare, s);
-    }
-
-    @ParameterizedTest(name = "{index} => int1={0}, int2={1}, sum={2}")
-    @CsvSource({
-            "2, 3, 5",
-            "5, 4, 9"
-    })
-    @DisplayName("An example of a CsvSource parameterised test")
-    void outputSumOfNumbersWithCSVSource(int x, int y, int expectedSum) {
-        String s = String.format("The sum of %s and %s should be %s.", x, y, expectedSum);
-
-        int actualSum = calculator.addNumbers(x, y);
-        assertEquals(expectedSum, actualSum, s);
     }
 }
