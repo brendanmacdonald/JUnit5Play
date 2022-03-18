@@ -13,14 +13,14 @@ public class RandomTests {
     @Test
     @ExtendWith(RandomStringExtension.class)
     void assertLengthOfRandomStringFromExtension(String string) {
-        System.out.println("x is " + string);
+        System.out.println("The randomly generated string is: " + string);
         assertEquals(string.length(), 10, "The randomly generated string was not 10 characters long.");
     }
 
     @Test
     @ExtendWith(RandomNumberExtension.class)
     void assertRandomNumberFromExtension(Integer integer) {
-        System.out.println("x is " + integer);
+        System.out.println("The randomly generated number is: " + integer);
         assertTrue(integer <= 10, "The random integer was not less than 10.");
     }
 }

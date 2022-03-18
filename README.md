@@ -9,6 +9,7 @@
    3. Add MAVEN_HOME to the User Variables in Environment Variables and set the path to the location of the extracted folder.
    4. Add M2_HOME to the User Variables in Environment Variables and set the path to the location of the extracted folder.
    5. Additionally, add the path to the maven install to the System Variables, and add \bin to the end of the path.
-//ArgumentsProvider 
-// RegisterExtension
-//generate random number extension
+3. TO DO:
+   1. ArgumentsProvider
+   2. RegisterExtension
+   3. Parallel

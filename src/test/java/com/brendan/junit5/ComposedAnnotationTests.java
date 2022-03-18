@@ -20,7 +20,7 @@ public class ComposedAnnotationTests {
     @ValueSource(ints = {2, 3, 5})
     @DisplayName("An example of a ValueSource parameterised test")
     @TimingAndLoggingTests
-     void outputSumOfNumbersWithValueSource(int x) throws InterruptedException {
+     void outputSumOfNumbersWithValueSourceAndComposedAnnotation(int x) throws InterruptedException {
         String s = String.format("The square of %s should be " + (x*x), x);
 
         // Enforce sleep to test timing extension.
