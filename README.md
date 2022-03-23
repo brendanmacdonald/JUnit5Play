@@ -13,3 +13,4 @@
    1. ArgumentsProvider
    2. RegisterExtension
    3. Parallel
+   4. TestInfo
