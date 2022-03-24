@@ -14,3 +14,5 @@
    2. RegisterExtension
    3. Parallel
    4. TestInfo
+   5. @Tag
+   6. @Disabled
