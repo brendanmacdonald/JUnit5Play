@@ -12,8 +12,9 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <junit.jupiter.version>5.8.2</junit.jupiter.version>
+        <junit.platform.suite.api>1.8.2</junit.platform.suite.api>
+        <junit.platform.suite.engine>1.8.2</junit.platform.suite.engine>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -21,6 +22,20 @@
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-suite-api -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite-api</artifactId>
+            <version>${junit.platform.suite.api}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite-engine</artifactId>
+            <version>${junit.platform.suite.engine}</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -41,6 +56,16 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
+
+                <configuration>
+                    <includes>
+                        <include>**/*TestSuite</include>
+                    </includes>
+                    <!-- include @Tag -->
+                    <groups>smoke, regression</groups>
+                    <!-- exclude @Tag -->
+                    <excludedGroups>development</excludedGroups>
+              </configuration>
             </plugin>
         </plugins>
     </build>

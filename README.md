@@ -13,6 +13,32 @@
    1. ArgumentsProvider
    2. RegisterExtension
    3. Parallel
-   4. TestInfo
-   5. @Tag
-   6. @Disabled
+   4. @Disabled
+# Running @Tag tests
+   There are three approaches.
+## Approach 1
+Specify on the command line which @Tags to execute or not:
+   * `mvn clean test -Dgroups="smoke, development"`
+   * `mvn clean test -DexcludedGroups="regression"`
+## Approach 2
+Set the `<configuration>` tag in the maven-surefire-plugin like this:\
+   `<!-- include @Tag -->`\
+   `<groups>smoke, regression</groups>`\
+   `<!-- exclude @Tag -->`\
+   `<excludedGroups>development</excludedGroups>`\
+This command can then be used to run only 'included' tags from the TagTests class:\
+     * ` mvn clean test -Dtest="TagTests"`\
+This command can be used to run only 'included' tags across all .*Test classes:\
+` mvn clean test -Dtest=".*Tests"`
+## Approach 3 
+Create a custom test suite and annotate as required. See 'TestSuites' folder for examples.\
+Set the `<configuration>` tag in the maven-surefire-plugin like this:\
+`<includes>`\
+`<include>**/*TestSuite</include>`\
+`</includes>`\
+This command can be used to execute a test suite:\
+`mvn clean test
+# Notes
+Suites require both of the following maven dependencies:
+* junit-platform-suite-api
+* junit-platform-suite-engine
