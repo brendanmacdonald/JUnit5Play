@@ -34,10 +34,17 @@ This command can be used to run only 'included' tags across all .*Test classes:\
 Create a custom test suite and annotate as required. See 'TestSuites' folder for examples.\
 Set the `<configuration>` tag in the maven-surefire-plugin like this:\
 `<includes>`\
-`<include>**/*TestSuite</include>`\
+`<include>**/DevelopmentTestSuite</include>`\
 `</includes>`\
 This command can be used to execute a test suite:\
-`mvn clean test
+`mvn clean test`\
+or something less specific like this\
+`<includes>`\
+`<include>${testSuite}</include>`\
+`</includes>`\
+This command can be used to execute a test suite:\
+`mvn clean test -DtestSuite="**/DevelopmentTestSuite"`\
+
 # Notes
 Suites require both of the following maven dependencies:
 * junit-platform-suite-api

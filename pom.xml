@@ -59,12 +59,13 @@
 
                 <configuration>
                     <includes>
-                        <include>**/*TestSuite</include>
+                        <include>**/DevelopmentTestSuite</include>
+<!--                        <include>${testSuite}</include> // testSuite can be configured on the command line-->
                     </includes>
                     <!-- include @Tag -->
-                    <groups>smoke, regression</groups>
+<!--                    <groups>smoke, regression</groups>-->
                     <!-- exclude @Tag -->
-                    <excludedGroups>development</excludedGroups>
+<!--                    <excludedGroups>development</excludedGroups>-->
               </configuration>
             </plugin>
         </plugins>
