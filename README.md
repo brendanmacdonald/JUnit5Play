@@ -13,7 +13,8 @@
    1. ArgumentsProvider
    2. RegisterExtension
    3. Parallel
-   4. @Disabled
+   4. @EnabledIf
+   5. TestFactory
 # Running @Tag tests
    There are three approaches.
 ## Approach 1
