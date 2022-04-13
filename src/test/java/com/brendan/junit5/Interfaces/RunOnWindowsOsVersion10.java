@@ -1,4 +1,4 @@
-package com.brendan.junit5.CustomConditions;
+package com.brendan.junit5.Interfaces;
 
 
 import org.junit.jupiter.api.Test;
@@ -17,4 +17,5 @@ import java.lang.annotation.Target;
 @EnabledOnOs(OS.WINDOWS)
 @EnabledIfSystemProperty(named = "os.version", matches = ".*10.0.*")
 public @interface RunOnWindowsOsVersion10 {
+    // This is a custom condition used in the ConditionalTests class.
 }
