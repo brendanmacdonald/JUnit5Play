@@ -59,7 +59,7 @@
 
                 <configuration>
                     <includes>
-                        <include>**/DevelopmentTestSuite</include>
+<!--                        <include>**/DevelopmentTestSuite</include>-->
 <!--                        <include>${testSuite}</include> // testSuite can be configured on the command line-->
                     </includes>
                     <!-- include @Tag -->

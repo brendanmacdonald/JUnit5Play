@@ -2,11 +2,8 @@ package com.brendan.junit5;
 
 
 import com.brendan.calculator.Calculator;
-import com.brendan.junit5.Extensions.LoggingExtension;
-import com.brendan.junit5.Extensions.TimingExtension;
 import com.brendan.junit5.Interfaces.TimingAndLoggingTests;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

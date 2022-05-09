@@ -1,14 +1,13 @@
 # Requirements to run the tests located in /src/test/
 1. Download, install, and configure Java
    1. https://www.oracle.com/java/technologies/downloads/#jdk17-windows
-   2. Add JAVA_HOME to the User Variables in Environment Variables and set the path to the location of the java install.
-   3. Additionally, add the path to the java install to the System Variables.
+   2. Add **JAVA_HOME** to the User Variables in Environment Variables and set the path to the location of the java install.
+   3. Add **%JAVA_HOME%\bin** the **Path** variable in the System Variables.
 2. Download, install, and configure Maven 
    1. https://maven.apache.org/download.cgi
-   2. Extract the downloaded zip file.
-   3. Add MAVEN_HOME to the User Variables in Environment Variables and set the path to the location of the extracted folder.
-   4. Add M2_HOME to the User Variables in Environment Variables and set the path to the location of the extracted folder.
-   5. Additionally, add the path to the maven install to the System Variables, and add \bin to the end of the path.
+   2. Extract the downloaded zip file (e.g. to C:\Program Files\Maven\apache-maven-3.8.5)
+   3. Add **MAVEN_HOME** to the System Variables in Environment Variables and set the path to C:\Program Files\Maven\apache-maven-3.8.5.
+   4. Add **%MAVEN_HOME%\bin** to the **Path** variable in the System Variables.
 
 # Running @Tag tests
    There are three approaches.
@@ -50,8 +49,7 @@ Test Suites require both of the following maven dependencies:
 * junit-platform-suite-engine
 
 _WIP - TO DO_:
-   1. _ArgumentsProvider_
-   2. _RegisterExtension_
-   3. _Parallel_
-   4. @_EnabledIf_
-   5. _TestFactory_
+1. _Parallel_
+2. _ArgumentsProvider_
+3. _RegisterExtension_
+4. _TestFactory_

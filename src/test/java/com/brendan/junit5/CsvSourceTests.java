@@ -1,6 +1,5 @@
 package com.brendan.junit5;
 
-
 import com.brendan.calculator.Calculator;
 import com.brendan.junit5.Extensions.LoggingExtension;
 import com.brendan.junit5.Extensions.TimingExtension;
