@@ -1,6 +1,6 @@
-package com.brendan.junit5;
+package com.brendan.junit5.Tests.ArgumentSourceTests;
 
-import com.brendan.junit5.enums.Levels;
+import com.brendan.junit5.Enums.Levels;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 

@@ -1,4 +1,4 @@
-package com.brendan.junit5;
+package com.brendan.junit5.Tests;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;

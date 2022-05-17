@@ -1,6 +1,6 @@
 package com.brendan.junit5.TestSuites;
 
-import com.brendan.junit5.TagTests;
+import com.brendan.junit5.Tests.TagTests;
 import org.junit.platform.suite.api.*;
 
 @Suite

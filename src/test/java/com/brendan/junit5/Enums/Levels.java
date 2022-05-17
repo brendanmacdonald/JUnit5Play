@@ -1,4 +1,4 @@
-package com.brendan.junit5.enums;
+package com.brendan.junit5.Enums;
 
 public enum Levels {
     LOW(""),

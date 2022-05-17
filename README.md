@@ -74,5 +74,5 @@ The logs will output something like this showing that 4 separate ForkJoinPool th
 
 _WIP - TO DO_:
 1. _ArgumentsProvider_
-2_RegisterExtension_
-3_TestFactory_
+2. _RegisterExtension_
+3. _TestFactory_

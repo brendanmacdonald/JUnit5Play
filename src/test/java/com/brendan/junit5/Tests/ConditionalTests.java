@@ -1,4 +1,4 @@
-package com.brendan.junit5;
+package com.brendan.junit5.Tests;
 
 import com.brendan.junit5.Interfaces.RunOnWindowsOsVersion10;
 import com.brendan.junit5.Extensions.LoggingExtension;

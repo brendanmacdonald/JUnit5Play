@@ -1,4 +1,4 @@
-package com.brendan.junit5;
+package com.brendan.junit5.ParallelTests;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package com.brendan.junit5;
+package com.brendan.junit5.Tests;
 
 
 import com.brendan.calculator.Calculator;
@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ComposedAnnotationTests {
+public class    ComposedAnnotationTests {
 
     private final Calculator calculator = new Calculator();
 
