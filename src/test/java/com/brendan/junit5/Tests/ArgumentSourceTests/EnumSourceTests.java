@@ -31,13 +31,13 @@ public class EnumSourceTests {
             value = Levels.class,
             names = "MEDIUM",
             mode = EnumSource.Mode.INCLUDE)
-    void getValuesFromCustomEnum_GetValue(Levels level) {
+    void getValuesFromCustomEnum_GetValue(Levels levels) {
         assertAll(
                 "Level enum assertions group",
-                () -> assertThat(level.level.toString(), containsString("This")),
-                () -> assertThat(level.level.toString(), containsString("is")),
-                () -> assertThat(level.level.toString(), containsString("the")),
-                () -> assertThat(level.level.toString(), containsString("default"))
+                () -> assertThat(levels.level.toString(), containsString("This")),
+                () -> assertThat(levels.level.toString(), containsString("is")),
+                () -> assertThat(levels.level.toString(), containsString("the")),
+                () -> assertThat(levels.level.toString(), containsString("default"))
         );
     }
 }
