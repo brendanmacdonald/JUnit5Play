@@ -59,18 +59,18 @@ The test classes named *ParallelTest can be used to verify that the tests can be
 4. Add this line to the file to enable parallel execution within a test class:\
 `junit.jupiter.execution.parallel.mode.default = concurrent`
 5. Add this line to the file to enable parallel execution across test classes:\
-6. `junit.jupiter.execution.parallel.mode.classes.default = concurrent`
-7. This command can be used to execute a test suite:\
+`junit.jupiter.execution.parallel.mode.classes.default = concurrent`
+6. This command can be used to execute a test suite:\
    `mvn clean test -Dtest=".*ParallelTest"`\
 The logs will output something like this showing that 4 separate ForkJoinPool threads were started simultaneously:\
-`SecondParallelTest second() start => ForkJoinPool-1-worker-3`
-`SecondParallelTest first() start => ForkJoinPool-1-worker-1`
-`FirstParallelUnitTest first() start => ForkJoinPool-1-worker-2`
-`FirstParallelUnitTest second() start => ForkJoinPool-1-worker-4`
-`SecondParallelTest first() end => ForkJoinPool-1-worker-1`
-`FirstParallelUnitTest first() end => ForkJoinPool-1-worker-2`
-`SecondParallelTest second() end => ForkJoinPool-1-worker-3`
-`FirstParallelUnitTest second() end => ForkJoinPool-1-worker-4`
+`SecondParallelTest second() start => ForkJoinPool-1-worker-3`\
+`SecondParallelTest first() start => ForkJoinPool-1-worker-1`\
+`FirstParallelUnitTest first() start => ForkJoinPool-1-worker-2`\
+`FirstParallelUnitTest second() start => ForkJoinPool-1-worker-4`\
+`SecondParallelTest first() end => ForkJoinPool-1-worker-1`\
+`FirstParallelUnitTest first() end => ForkJoinPool-1-worker-2`\
+`SecondParallelTest second() end => ForkJoinPool-1-worker-3`\
+`FirstParallelUnitTest second() end => ForkJoinPool-1-worker-4`\
 
 _WIP - TO DO_:
 2. _RegisterExtension_
